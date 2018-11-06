@@ -19,31 +19,32 @@ public class WordPyramid {
      */
     public static void main(String[] args) {
     String letters =   JOptionPane.showInputDialog("Enter a word."); 
-   
   
   Pryamid(letters);
-   
-    
+  
     }
     public static void Pryamid(String word){
         
-        
-        if(word.length() ==1 ||word.length() ==2 ){
+        System.out.println(word);
+        if(word.length() > 2) {
+           Pryamid(word.substring(1,word.length()-1)); 
+        }
+       // if(word.length() ==1 ||word.length() ==2 ){
   
-            System.out.println(word);
-        }
-        else {    
-            System.out.println(word);
-             for (int i = word.length(); i > 2;) {
-                 if(word.length() >= 2) {
-                 word =word.substring(1);
-                  word =word.substring(0,word.length()-1);
-                  System.out.println(word);
-                 }
-                 else {
-                    break;
-                 }
-             }
-        }
+         //   System.out.println(word);
+       // }
+      //  else {    
+        //    System.out.println(word);
+           //  for (int i = word.length(); i > 2;) {
+           //      if(word.length() >= 2) {
+              //   word =word.substring(1);
+               //   word =word.substring(0,word.length()-1);
+                //  System.out.println(word);
+               //  }
+                // else {
+                 //   break;
+               //  }
+           // }
+      //  }
     }  
 }
